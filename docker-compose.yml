@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  python:
+    container_name: python
+    build: python/.
+    volumes:
+      - ./python:/code
+    command: ["tail", "-f", "/dev/null"]
+
+  javascript:
+    container_name: javascript
+    build: javascript/.
+    volumes:
+      - ./javascript:/code
+    command: ["tail", "-f", "/dev/null"]
+
+  #javascript:
+    #container_name: php
+    #build: php/.
+    #volumes:
+      #- ./php:/code
+    #command: ["tail", "-f", "/dev/null"]
